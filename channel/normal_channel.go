@@ -1,4 +1,4 @@
-package main
+package channel
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 
-func main() {
+func normal_channel() {
 	greeting := make(chan string)
 	go func(){
 		greeting <- "string"

@@ -1,4 +1,4 @@
-package main
+package channel
 
 import (
 	"fmt"
@@ -51,15 +51,15 @@ import (
 // }
 // }
 
-func main(){
+func main() {
 	data := make(chan int)
 	quit := make(chan bool)
-	go func(){
-		for{
+	go func() {
+		for {
 			select {
-			case d :=<- data:
+			case d := <-data:
 				fmt.Println("data is ", d)
-			case <- quit:
+			case <-quit:
 				fmt.Println("Stopping....")
 			default:
 				fmt.Println("waiting for data")
@@ -70,7 +70,7 @@ func main(){
 
 	for i := range 5 {
 		data <- i
-		time.Sleep(1 *time.Second)
+		time.Sleep(1 * time.Second)
 	}
 	quit <- true
 

@@ -1,4 +1,4 @@
-package main
+package tocken_bucket_algo
 
 import (
 	"fmt"

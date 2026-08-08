@@ -1,4 +1,4 @@
-package main
+package rate_limit
 
 import (
 	"fmt"

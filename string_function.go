@@ -1,4 +1,4 @@
-package main
+package string_fucntion
 
 import (
 	"fmt"
@@ -39,7 +39,7 @@ func main() {
 	builder.WriteString("hello")
 	builder.WriteString(",")
 	builder.WriteString("world")
-	result:= builder.String()
+	result := builder.String()
 	fmt.Println(result)
 	builder.Reset()
 	fmt.Println(result)
